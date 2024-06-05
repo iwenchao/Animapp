@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/my_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/fireworks_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fireworks"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/waterdrop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Water Drop"
+        android:layout_above="@id/fireworks_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+    <Button
+        android:id="@+id/path_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Water Drop"
+        android:layout_above="@id/waterdrop_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+</RelativeLayout>
