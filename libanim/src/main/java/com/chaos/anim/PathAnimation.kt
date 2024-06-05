@@ -8,7 +8,7 @@ import android.view.View
  * @Author      : wen
  * @Email       : iwenchaos6688@163.com
  * @Date        : on 2024/6/5 10:57.
- * @Description :描述
+ * @Description : 动画路径
  */
 class PathAnimation(private val view:View) {
     private var path: Path? = null

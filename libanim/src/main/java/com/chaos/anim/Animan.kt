@@ -3,6 +3,7 @@ package com.chaos.anim
 import android.animation.Animator
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.graphics.Path
 import android.view.View
 
 /**
@@ -55,6 +56,14 @@ class Animan {
         return this
     }
 
+    fun addPathAnimation(view: View, path: Path, duration: Long): Animan {
+        val animator = ObjectAnimator.ofFloat(view, View.X, View.Y, path).apply {
+            this.duration = duration
+        }
+        animators.add(animator)
+        return this
+    }
+
     fun setDuration(duration: Long): Animan {
         animators.forEach { it.duration = duration }
         return this
@@ -65,8 +74,19 @@ class Animan {
         return this
     }
 
-    fun start() {
+
+    fun playTogether(): Animan {
         animatorSet.playTogether(animators as Collection<Animator>?)
+        return this
+    }
+
+    fun playSequentially(): Animan {
+        animatorSet.playSequentially(animators as List<Animator>?)
+        return this
+    }
+
+
+    fun start() {
         animatorSet.start()
     }
 
